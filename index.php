@@ -20,6 +20,8 @@
 <div class="row" id="counter">
 	
 </div>
+<br>
+<a class="btn btn-success" href="add-events.php"><i class="fa fa-plus"> Add Events </i></a>
 </div>
 </body>
 <script src="script.js"> </script>

@@ -18,9 +18,15 @@ class Counter{
 		$result = mysqli_query($this->conn,$sql);
 		while($row = mysqli_fetch_assoc($result))
 		{
-			echo $row['name']."<br>";
+			$id = $row['id'];
+		?>
+		<div class="col-lg-2 col-md-4 col-sm-6 border border-danger p-4">
+		<?php
+			echo "<h4 class='text-success'>".$row['name']." <small class='text-muted'><a class='btn btn-danger' href='delete.php?id=".$id."'> <i class='fa fa-trash'></i> </a></small></h4>";
 			echo $this->dateDiffernce($row['date']);
-			
+			?>
+		</div>
+			<?php
 		}
 
 	}
